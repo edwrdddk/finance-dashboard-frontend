@@ -1,3 +1,4 @@
+/* TO GRAB DATA FROM BACKEND */
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const api = createApi({
@@ -9,13 +10,7 @@ export const api = createApi({
       query: () => "kpi/kpis/",
       providesTags: ["Kpis"],
     }),
-    // getProducts: build.query<void, void>({
-    //   query: () => "product/products/",
-    //   providesTags: ["Products"],
-    // }),
-    // getTransactions: build.query<void, void>({
-    //   query: () => "transaction/transactions/",
-    //   providesTags: ["Transactions"],
-    // }),
   }),
 });
+
+export const { useGetKpisQuery } = api;
