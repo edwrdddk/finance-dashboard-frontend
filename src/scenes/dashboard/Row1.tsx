@@ -23,7 +23,19 @@ type Props = {};
 const Row1 = (props: Props) => {
   const { palette } = useTheme();
   const { data } = useGetKpisQuery();
-  console.log("data:", data);
+  // console.log("data:", data);
+
+  const revenue = useMemo(() => {
+    return (
+      data &&
+      data[0].monthlyData.map(({ month, revenue }) => {
+        return {
+          name: month.substring(0, 3),
+          revenue: revenue,
+        };
+      })
+    );
+  }, [data]);
 
   const revenueExpenses = useMemo(() => {
     return (
@@ -199,7 +211,7 @@ const Row1 = (props: Props) => {
           <BarChart
             width={500}
             height={300}
-            data={data}
+            data={revenue}
             margin={{
               top: 17,
               right: 15,
