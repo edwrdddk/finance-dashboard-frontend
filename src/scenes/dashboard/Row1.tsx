@@ -207,6 +207,20 @@ const Row1 = (props: Props) => {
               bottom: 58,
             }}
           >
+            <defs>
+              <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+                <stop
+                  offset="5%"
+                  stopColor={palette.primary[300]}
+                  stopOpacity={0.8}
+                />
+                <stop
+                  offset="95%"
+                  stopColor={palette.primary[300]}
+                  stopOpacity={0}
+                />
+              </linearGradient>
+            </defs>
             <CartesianGrid vertical={false} stroke={palette.grey[800]} />
             <XAxis
               dataKey="name"
@@ -220,9 +234,7 @@ const Row1 = (props: Props) => {
               style={{ fontSize: "10px" }}
             />
             <Tooltip />
-            <Legend />
-            <Bar dataKey="pv" fill="#8884d8" />
-            <Bar dataKey="uv" fill="#82ca9d" />
+            <Bar dataKey="revenue" fill="url(#colorRevenue)" />
           </BarChart>
         </ResponsiveContainer>
       </DashboardBox>
