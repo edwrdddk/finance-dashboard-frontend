@@ -132,7 +132,7 @@ const Row1 = (props: Props) => {
       <DashboardBox gridArea="b">
         <BoxHeader
           title="Profit and Revenue"
-          subtitle="top line represents revenue, bottom line represents expenses"
+          subtitle="top line represents profit, bottom line represents revenue"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -201,14 +201,19 @@ const Row1 = (props: Props) => {
             height={300}
             data={data}
             margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
+              top: 17,
+              right: 15,
+              left: -5,
+              bottom: 58,
             }}
           >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
+            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <XAxis
+              dataKey="name"
+              axisLine={false}
+              tickLine={false}
+              style={{ fontSize: "10px" }}
+            />
             <YAxis />
             <Tooltip />
             <Legend />
