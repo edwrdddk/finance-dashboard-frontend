@@ -214,7 +214,11 @@ const Row1 = (props: Props) => {
               tickLine={false}
               style={{ fontSize: "10px" }}
             />
-            <YAxis />
+            <YAxis
+              axisLine={false}
+              tickLine={false}
+              style={{ fontSize: "10px" }}
+            />
             <Tooltip />
             <Legend />
             <Bar dataKey="pv" fill="#8884d8" />
