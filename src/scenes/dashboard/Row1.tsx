@@ -1,4 +1,4 @@
-import DashboardBox from "@/components/ DashboardBox";
+import DashboardBox from "@/components/DashboardBox";
 import BoxHeader from "@/components/BoxHeader";
 import { useGetKpisQuery } from "@/state/api";
 import { useTheme } from "@mui/material";
