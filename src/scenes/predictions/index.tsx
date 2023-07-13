@@ -1,9 +1,10 @@
 import DashboardBox from "@/components/DashboardBox";
-import { useGetKpisQuery } from '@/state/api';
+import FlexBetween from "@/components/FlexBetween";
+import { useGetKpisQuery } from "@/state/api";
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-type Props = {}
+type Props = {};
 
 const Predictions = (props: Props) => {
   const { palette } = useTheme();
@@ -11,10 +12,18 @@ const Predictions = (props: Props) => {
   const { data: kpiData } = useGetKpisQuery();
 
   return (
-    <DashboardBox>
-      
+    <DashboardBox width="100%" height="100%" p="1rem" overflow="hidden">
+      <FlexBetween m="1rem 2.5rem" gap="1rem">
+        <Box>
+          <Typography variant="h3">Revenue and Predictions</Typography>
+          <Typography variant="h6">
+            charted revenue and predicted revenue based on a simple linear
+            regression model
+          </Typography>
+        </Box>
+      </FlexBetween>
     </DashboardBox>
-  )
-}
+  );
+};
 
-export default Predictions
+export default Predictions;
