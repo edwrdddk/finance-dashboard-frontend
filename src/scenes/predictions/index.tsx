@@ -16,9 +16,7 @@ import {
 } from "recharts";
 import regression, { DataPoint } from "regression";
 
-type Props = {};
-
-const Predictions = (props: Props) => {
+const Predictions = () => {
   const { palette } = useTheme();
   const [isPredictions, setIsPredictions] = useState(false);
   const { data: kpiData } = useGetKpisQuery();
@@ -46,7 +44,7 @@ const Predictions = (props: Props) => {
 
   return (
     <DashboardBox width="100%" height="100%" p="1rem" overflow="hidden">
-      <FlexBetween m="1rem 2.5rem" gap="1rem">
+      <FlexBetween m="1rem 2.5rem" gap="3rem">
         <Box>
           <Typography variant="h3">Revenue and Predictions</Typography>
           <Typography variant="h6">
@@ -60,6 +58,7 @@ const Predictions = (props: Props) => {
             color: palette.grey[900],
             backgroundColor: palette.grey[700],
             boxShadow: "0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.4)",
+            textTransform: "none"
           }}
         >
           <Typography variant="h4">Show Predicted Revenue for Next Year</Typography>
