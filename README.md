@@ -7,10 +7,10 @@ Technologies used:
 - Charts: Recharts, MUI Data Grid.
 - Regression.js (Predictions Page).
 - Node.js(Express.js).*
-- MongoDb.*
+- MongoDB.*
 
 *Backend is a separate repo (https://github.com/edwrdddk/finance-dashboard-backend.git).
 
 Link to deployed app**: https://finance-dashboard-frontend.vercel.app/
 
-**Backend is deployed w/ Render, so it might take a couple of minutes to load 🥲
+**Backend is deployed w/ Render, so it might sometimes take a couple of minutes to load 🥲
